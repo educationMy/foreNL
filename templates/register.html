@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block y %}
+
+<h1> REGISTER </h1>
+
+<form action="/register" method="POST">
+	<input type="text" name="fName" placeholder="First Name" autocomplete="off" required="required" />
+    <input type="text" name="lName" placeholder="Last Name" autocomplete="off" required="required" />
+	<input type="email" name="userName" placeholder="Email Address" autocomplete="off" required="required" />
+    <input type="password" name="passWord" placeholder="Password" autocomplete="off" required="required" />
+	
+	<input type="submit" name="Register">
+</form>
+
+<div>
+	{{ error }}
+</div>
+
+{% endblock %}

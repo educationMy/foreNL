@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block y %}
+
+{% if session.userName %}
+
+	<div style="padding-bottom: 20px;">
+		User Dashboard
+	</div>
+
+	You are logged in as : {{ session.userName }}
+
+	<div style="padding-top: 50px;">
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nam excepturi animi incidunt porro magni voluptatum.
+		Facere, quidem tenetur! Ratione tempora quidem error, ducimus perspiciatis eveniet aspernatur inventore eos, aliquid
+		at earum molestias ex alias omnis autem quaerat! Maiores delectus aliquid aperiam eligendi quam soluta
+		necessitatibus nemo commodi dolorem. Expedita?
+	</div>
+	
+	<div style="padding-top: 60px;">
+		<a style="color: white;" href="/logout">logout</a>
+
+	</div>
+	
+{% else %}
+	You are not logged in! <a href="/login">login</a>
+{% endif %}
+
+{% endblock %}

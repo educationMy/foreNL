@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block y %}
+
+<h1> LOGIN </h1>
+
+<form action="/login" method="POST">
+	<input placeholder="Email ID" autocomplete="off" type="email" name="userName">
+	<input type="password" placeholder="Enter your password" autocomplete="off" name="passWord">
+	<input type="submit" name="Register">
+
+	<div>
+		{{ error }}
+	</div>
+	
+	<div style="padding-top: 100px;">
+		New User?
+	</div>
+	<div style="padding-top: 20px;">
+		<a style="color: white;" href="\register">Register here</a>
+
+	</div>
+</form>
+
+{% endblock %}
