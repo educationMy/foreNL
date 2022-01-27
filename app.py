@@ -56,6 +56,12 @@ def logout():
     session["userName"] = None
     return redirect("/")
 
+@app.route("/upload", methods=["POST", "GET"])
+def upload():
+    if request.method == "POST":
+        return render_template('index.html')
+    return render_template('upload.html')
+
 @app.route("/about")
 def about():
     return render_template('about.html')
